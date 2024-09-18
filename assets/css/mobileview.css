@@ -1,0 +1,180 @@
+ /* Custom animation for sliding menu from left */
+ .custom-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 250px;
+    background-image: transparent;
+    transition: right 0.5s ease;
+    z-index: 1000;
+    padding-top: 0px;
+    max-height: 100vh;
+    overflow-y: none;
+  }
+
+  .custom-nav.open {
+    right: 0;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 999;
+    background-image: linear-gradient(45deg, #54275a, transparent);
+  }
+
+  .overlay.show {
+    display: block;
+  }
+
+  /* Hide the navbar toggler on large devices */
+  @media (min-width: 992px) {
+    #navbar-toggler {
+      display: none;
+    }
+    .custom-nav {
+      position: static;
+      display: flex;
+      width: auto;
+      height: auto;
+      /* background-image: linear-gradient(45deg, #463bb1, #e148a0); */
+      transition: none;
+      z-index: auto;
+    }
+    .overlay {
+      display: none;
+    }
+  }
+
+@media (max-width: 991.98px) {
+    .header .header-logo .logo-default {
+        display: inline-block;
+    }
+    .custom-nav {
+        
+        background-image: linear-gradient(45deg, #463bb1, #e148a0);
+       
+      }
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+@media (max-width: 992px) {
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .navbar-brand{
+        margin-left: 25px;
+    }
+    .navbar-nav {
+        flex-direction: row;
+        /* display: none; */
+    }
+    .navbar-nav2{
+        flex-direction: column;
+
+    }
+    .padding-4 {
+        padding: 0.5rem !important;
+    }
+    .paddingx-3 {
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+        margin-top: 10px;
+    } 
+        .w-lg-900px {
+            width: 900px !important;
+        } 
+        .p-lg-5 {
+            padding: 1.25rem !important;
+        }
+        .menu-sub-lg-dropdown {
+            background-color: var(--bs-menu-dropdown-bg-color);
+            border-radius: .475rem;
+            box-shadow: var(--bs-menu-dropdown-box-shadow);
+            display: none;
+            z-index: 107;
+        }
+        .menu-sub-lg-dropdown.menu.show, .menu-sub-lg-dropdown.show[data-popper-placement], .show.menu-dropdown>.menu-sub-lg-dropdown {
+            -webkit-animation: menu-sub-dropdown-animation-fade-in .3s ease 1, menu-sub-dropdown-animation-move-up .3s ease 1;
+            animation: menu-sub-dropdown-animation-fade-in .3s ease 1, menu-sub-dropdown-animation-move-up .3s ease 1;
+            display: flex;
+            will-change: transform;
+        }
+        .custom-nav {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          height: 100%;
+          width: 250px;
+          background-image: transparent;
+          transition: right 0.5s ease;
+          z-index: 1000;
+          padding-top: 0px;
+          max-height: 100vh;
+          overflow-y: scroll;
+        }
+        .mega-menu .row {
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+      }
+}
+ /* Hide the navbar toggler on large devices */
+ @media (min-width: 992px) {
+    #navbar-toggler {
+      display: none;
+    }
+  
+    
+  }
+@media (min-width: 992px) {
+    .me-lg-1 {
+        margin-right: .25rem !important;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 3px;
+        }
+
+}
+@media(min-width:992px) {
+    .hideinlarge{
+        display: none !important;
+    }
+    
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    position: static !important;
+    width: 100%;
+    display: block;
+    padding: 10px 0px;
+    transform: none !important; 
+}
+}
+@media (min-width:998px) and (max-width : 1024px){
+  .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+    width: 60%;
+    border-radius: 6px;
+}
+ 
+}
